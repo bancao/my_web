@@ -41,14 +41,14 @@ public class MUserController {
 		String id = UUID.randomUUID().toString();
 		muser.setId(id);
 		muserService.insert(muser);
-		return "redirect:/muserController/listUser.do";
+		return "redirect:/user/listUser.do";
 	}
 	
 	@RequestMapping(value="/deleteUser")
 	public String deleteUser(String id) {
 		
 		muserService.delete(id);
-		return "redirect:/muserController/listUser.do";
+		return "redirect:/user/listUser.do";
 	}
 	
 	@RequestMapping(value="/updateUserUI")
@@ -63,6 +63,6 @@ public class MUserController {
 	public String updateUser(MUser muser) {
 		
 		muserService.update(muser);
-		return "redirect:/muserController/listUser.do";
+		return "redirect:/user/listUser.do";
 	}
 }
